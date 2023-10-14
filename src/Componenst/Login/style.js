@@ -1,3 +1,4 @@
+import { Input, Select } from "antd";
 import styled from "styled-components";
 export const Wrapper = styled.div`
   width: 100%;
@@ -6,7 +7,12 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 60px;
+  .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    width: 100%;
+    border: none;
+  }
 `;
+
 Wrapper.Content = styled.div`
   width: 380px;
   display: flex;
@@ -49,6 +55,16 @@ Wrapper.Input = styled.input`
   background: #fff;
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
 `;
+Wrapper.Select = styled(Select)`
+  display: flex;
+  height: 50px;
+  width: 380px;
+  border-radius: 8px;
+  border: 1px solid #d7d7d7;
+  background: #fff;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
+`;
+
 Wrapper.Button = styled.button`
   display: flex;
   width: 380px;

@@ -1,7 +1,7 @@
 import React from "react";
 import { Wrapper } from "./style";
 import bg from "../../assets/images/login.jpg";
-
+import { grade } from "../../utils";
 const Login = () => {
   return (
     <Wrapper>
@@ -16,6 +16,8 @@ const Login = () => {
         <Wrapper.Input placeholder="********" />
         <Wrapper.Label>Parolni qaytaring</Wrapper.Label>
         <Wrapper.Input placeholder="********" />
+        <Wrapper.Label>Sinfingizni kiriting</Wrapper.Label>
+        <Wrapper.Select defaultValue={1} options={grade}></Wrapper.Select>
         <Wrapper.Button>Ro`yxatan o`tish</Wrapper.Button>
       </Wrapper.Content>
       <Wrapper.Img src={bg} />
