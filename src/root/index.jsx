@@ -6,6 +6,7 @@ import Quiz from "../Componenst/Quiz";
 import Login from "../Componenst/Login";
 import Courses from "../Componenst/Courses";
 import { RequireAuth } from "react-auth-kit";
+import LessonPage from "../Componenst/Generic/LessonPage";
 
 const Root = () => {
   return (
@@ -13,7 +14,8 @@ const Root = () => {
       <Route path="/" element={<Sidebar />}>
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<Courses />} />
-        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/courses/:courseName/:courseId" element={<LessonPage />} />
+        <Route path="/quiz/:subject" element={<Quiz />} />
       </Route>
       <Route path="/login" element={<Login />} />
     </Routes>

@@ -5,6 +5,7 @@ import {
 } from "react-icons/io5";
 import { MdOutlinePlayLesson } from "react-icons/md";
 import math from "../assets/images/math.jpg";
+import edu from "../assets/images/edu.jpg";
 export const sideBar = (handler) => {
   return [
     {
@@ -211,32 +212,38 @@ export const level = [
 export const lessons = [
   {
     id: 0,
-    title: "Kasrlar",
+    title: "Matematika",
     shouldLearn: true,
     img: math,
+    nav: "/quiz/math",
+    currently: true,
   },
   {
     id: 1,
-    title: "Kasrlar",
+    title: "Ingliz tili",
     shouldLearn: true,
-    img: math,
+    img: edu,
+    currently: false,
   },
   {
     id: 2,
-    title: "Kasrlar",
+    title: "Tarix",
     shouldLearn: true,
-    img: math,
+    img: edu,
+    currently: false,
   },
   {
     id: 3,
-    title: "Kasrlar",
+    title: "Ona-tili",
     shouldLearn: true,
-    img: math,
+    img: edu,
+    currently: false,
   },
   {
     id: 4,
-    title: "Kasrlar",
+    title: "Adabiyot",
     shouldLearn: true,
-    img: math,
+    img: edu,
+    currently: false,
   },
 ];

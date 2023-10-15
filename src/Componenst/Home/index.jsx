@@ -8,6 +8,8 @@ import time from "../../assets/icons/time.svg";
 import { courses, level } from "../../utils";
 import CourseCard from "../Generic/CouseCard";
 import { useSelector } from "react-redux";
+import { Select } from "antd";
+import { Option } from "antd/es/mentions";
 const Home = () => {
   const [levelCr, setLevelCr] = useState("easy");
   const { menuOpen } = useSelector(({ menu }) => menu);

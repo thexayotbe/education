@@ -42,4 +42,5 @@ Wrapper.Variant = styled.h3`
   font-weight: 500;
   border-radius: 20px;
   cursor: pointer;
+  transition: 0.2s;
 `;

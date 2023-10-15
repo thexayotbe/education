@@ -2,7 +2,7 @@ import { Input, Select } from "antd";
 import styled from "styled-components";
 export const Wrapper = styled.div`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +19,7 @@ Wrapper.Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 `;
 Wrapper.Title = styled.h3`
   color: #2b2b2b;
@@ -45,7 +45,7 @@ Wrapper.Label = styled.p`
   font-weight: 600;
   line-height: 50px; /* 24px */
 `;
-Wrapper.Input = styled.input`
+Wrapper.Input = styled(Input)`
   display: flex;
   height: 50px;
   width: 380px;
@@ -56,7 +56,7 @@ Wrapper.Input = styled.input`
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
 `;
 Wrapper.Select = styled(Select)`
-  display: flex;
+  /* display: flex; */
   height: 50px;
   width: 380px;
   border-radius: 8px;

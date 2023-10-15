@@ -10,9 +10,7 @@ Wrapper.Lessons = styled.div`
   gap: 40px;
   flex-wrap: wrap;
 `;
-Wrapper.AddCourses = styled.div`
-  display: none !important;
-`;
+Wrapper.AddCourses = styled.div``;
 Wrapper.Title = styled.h3`
   color: var(--Gray-1, #333);
   font-family: Gilroy-Medium;

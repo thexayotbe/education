@@ -1,19 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { Wrapper } from "./style";
+import { useDispatch, useSelector } from "react-redux";
+import { setSelectedAnswer } from "../../../redux/transferSlice";
+const QuizCard = ({ quiz, total }) => {
+  const { selectedAnswer } = useSelector(({ transfer }) => transfer);
 
-const QuizCard = () => {
+  const dispatch = useDispatch();
+  const handler = (num) => {
+    dispatch(setSelectedAnswer(num));
+  };
+
   return (
     <Wrapper>
-      <Wrapper.Number>1</Wrapper.Number>
-      <Wrapper.Question>
-        {" "}
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore.{" "}
-      </Wrapper.Question>
+      <Wrapper.Number>{total}</Wrapper.Number>
+      <Wrapper.Question>{quiz.question}</Wrapper.Question>
       <Wrapper.Variants>
-        <Wrapper.Variant>1</Wrapper.Variant>
-        <Wrapper.Variant className="selected">12</Wrapper.Variant>
-        <Wrapper.Variant>123</Wrapper.Variant>
-        <Wrapper.Variant>1234</Wrapper.Variant>
+        {quiz.options.map((value, index) => {
+          return (
+            <Wrapper.Variant
+              key={index}
+              className={selectedAnswer === index && "selected"}
+              onClick={() => handler(index)}>
+              {value}
+            </Wrapper.Variant>
+          );
+        })}
       </Wrapper.Variants>
     </Wrapper>
   );

@@ -20,7 +20,7 @@ const Sidebar = () => {
               <Wrapper.MenuItem
                 close={menuOpen}
                 className={index !== 0 && "item"}
-                onClick={() => navigate(`${value.path}`)}>
+                onClick={() => value.id !== 0 && navigate(`${value.path}`)}>
                 <Wrapper.MenuTitle close={menuOpen}>
                   {value.title}
                 </Wrapper.MenuTitle>
