@@ -25,3 +25,13 @@ Wrapper.Title = styled.h3`
   display: flex;
   justify-content: space-between;
 `;
+Wrapper.Button = styled.button`
+  width: 150px;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  background-color: ${({ theme }) => theme.main_color};
+`;

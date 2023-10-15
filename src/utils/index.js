@@ -212,7 +212,7 @@ export const level = [
 export const lessons = [
   {
     id: 10,
-    title: "Matematika",
+    title: "Matematika - Easy",
     shouldLearn: true,
     img: math,
     nav: "/quiz/math",
@@ -220,7 +220,15 @@ export const lessons = [
   },
   {
     id: 0,
-    title: "Matematika",
+    title: "Matematika - Middle",
+    shouldLearn: true,
+    img: math,
+    nav: "/courses/math/122",
+    currently: true,
+  },
+  {
+    id: 0,
+    title: "Matematika - Hard",
     shouldLearn: true,
     img: math,
     nav: "/courses/math/122",

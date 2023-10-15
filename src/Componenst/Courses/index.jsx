@@ -11,7 +11,14 @@ const Courses = () => {
   return (
     <Wrapper menuOpen={menuOpen}>
       <Wrapper.MainCourses>
-        <Wrapper.Title>Mavjud bo`lgan kurslar:</Wrapper.Title>
+        <Wrapper.Title>
+          Mavjud bo`lgan kurslar:{" "}
+          {
+            <Wrapper.Button onClick={() => navigate("/quiz/math")}>
+              Test
+            </Wrapper.Button>
+          }
+        </Wrapper.Title>
         <Wrapper.Lessons>
           {lessons.map((value) => {
             return value.currently && <VideoCover key={value.id} {...value} />;

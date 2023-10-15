@@ -14,18 +14,18 @@ const Quiz = () => {
   const [data, setData] = useState(tests);
   const [quiz, setQuiz] = useState();
   const [level, setLevel] = useState("easy");
-  const [amount, setAmount] = useState(1);
+  const [amount, setAmount] = useState(0);
   const [total, setTotal] = useState(1);
   const [answerWrong, setAnswerWrong] = useState([]);
+  const [modalOpen, setModalOpen] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const startTest = () => {
     let filtered = data.filter((value) => value.levels === level);
     setQuiz(filtered[Math.floor(Math.random() * filtered.length)]);
-    console.log(quiz, amount);
     setStart(true);
     if (total === 10) {
-      navigate("/courses/math/122");
+      setModalOpen(true);
       console.log(22);
       setTotal(0);
       setStart(false);
@@ -58,6 +58,23 @@ const Quiz = () => {
   );
   return (
     <>
+      <Modal open={modalOpen} footer={false}>
+        <Wrapper.Text>
+          <Wrapper.Point>
+            Siz berilagan 10 ta savoldan {amount}-ta tog`ri topdiz
+          </Wrapper.Point>
+          <Wrapper.Group>
+            Ba siz bu natija bilan bizning{" "}
+            {amount > 8 ? "Hard" : amount > 5 ? "Medium" : "Easy"} kursimizga
+            tog`ri kelasiz
+          </Wrapper.Group>
+          <Wrapper.Button onClick={navigate("/courses")}>
+            {" "}
+            {amount > 8 ? "Hard" : amount > 5 ? "Medium" : "Easy"} kursiga
+            o`tish`
+          </Wrapper.Button>
+        </Wrapper.Text>
+      </Modal>
       <Wrapper>
         {!start ? (
           <Wrapper.Button onClick={startTest}>Testni boshlash</Wrapper.Button>

@@ -17,7 +17,7 @@ Wrapper.Buttons = styled.div`
   gap: 20px;
 `;
 Wrapper.Button = styled.button`
-  width: 150px;
+  min-width: 150px;
   height: 50px;
   color: #fff;
   font-size: 16px;
@@ -27,9 +27,15 @@ Wrapper.Button = styled.button`
   background-color: ${({ theme }) => theme.main_color};
 `;
 Wrapper.Text = styled.div`
-  height: 200px;
+  height: 100px;
   padding-top: 40px;
   text-align: center;
 `;
-Wrapper.Point = styled.h3``;
-Wrapper.Group = styled.p``;
+Wrapper.Point = styled.h3`
+  font-size: 19px;
+  color: black;
+`;
+Wrapper.Group = styled.p`
+  font-size: 18px;
+  color: grey;
+`;
