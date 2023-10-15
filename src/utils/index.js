@@ -215,7 +215,7 @@ export const lessons = [
     title: "Matematika - Easy",
     shouldLearn: true,
     img: math,
-    nav: "/quiz/math",
+    nav: "/courses/math/easy",
     currently: true,
   },
   {
@@ -223,7 +223,7 @@ export const lessons = [
     title: "Matematika - Middle",
     shouldLearn: true,
     img: math,
-    nav: "/courses/math/122",
+    nav: "/courses/math/mid",
     currently: true,
   },
   {
@@ -231,7 +231,7 @@ export const lessons = [
     title: "Matematika - Hard",
     shouldLearn: true,
     img: math,
-    nav: "/courses/math/122",
+    nav: "/courses/math/hard",
     currently: true,
   },
   {

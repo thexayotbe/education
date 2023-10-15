@@ -68,7 +68,7 @@ const Quiz = () => {
             {amount > 8 ? "Hard" : amount > 5 ? "Medium" : "Easy"} kursimizga
             tog`ri kelasiz
           </Wrapper.Group>
-          <Wrapper.Button onClick={navigate("/courses")}>
+          <Wrapper.Button onClick={() => navigate("/courses")}>
             {" "}
             {amount > 8 ? "Hard" : amount > 5 ? "Medium" : "Easy"} kursiga
             o`tish`
