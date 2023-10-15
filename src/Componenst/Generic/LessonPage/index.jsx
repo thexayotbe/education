@@ -28,7 +28,7 @@ const LessonPage = () => {
         <ReactPlayer
           width={"800px"}
           height={"500px"}
-          url={"https://youtu.be/xwuRBeG4Z6E?si=zM6ZCXOufV-GNrRo"}
+          url={"https://youtu.be/gYrKtfrX-LQ?si=PpSJeUlkuS91zxPp"}
           controls={true}
         />
       </Wrapper.Content>

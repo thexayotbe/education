@@ -211,11 +211,19 @@ export const level = [
 
 export const lessons = [
   {
-    id: 0,
+    id: 10,
     title: "Matematika",
     shouldLearn: true,
     img: math,
     nav: "/quiz/math",
+    currently: true,
+  },
+  {
+    id: 0,
+    title: "Matematika",
+    shouldLearn: true,
+    img: math,
+    nav: "/courses/math/122",
     currently: true,
   },
   {

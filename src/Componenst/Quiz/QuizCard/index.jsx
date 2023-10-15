@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setSelectedAnswer } from "../../../redux/transferSlice";
 const QuizCard = ({ quiz, total }) => {
   const { selectedAnswer } = useSelector(({ transfer }) => transfer);
-
+  console.log(total);
   const dispatch = useDispatch();
   const handler = (num) => {
     dispatch(setSelectedAnswer(num));
@@ -13,18 +13,28 @@ const QuizCard = ({ quiz, total }) => {
   return (
     <Wrapper>
       <Wrapper.Number>{total}</Wrapper.Number>
-      <Wrapper.Question>{quiz.question}</Wrapper.Question>
+      <Wrapper.Question>{quiz?.title}</Wrapper.Question>
       <Wrapper.Variants>
-        {quiz.options.map((value, index) => {
-          return (
-            <Wrapper.Variant
-              key={index}
-              className={selectedAnswer === index && "selected"}
-              onClick={() => handler(index)}>
-              {value}
-            </Wrapper.Variant>
-          );
-        })}
+        <Wrapper.Variant
+          className={selectedAnswer === quiz?.optionA && "selected"}
+          onClick={() => handler(quiz?.optionA)}>
+          {quiz?.optionA}
+        </Wrapper.Variant>
+        <Wrapper.Variant
+          className={selectedAnswer === quiz?.optionB && "selected"}
+          onClick={() => handler(quiz?.optionB)}>
+          {quiz?.optionB}
+        </Wrapper.Variant>
+        <Wrapper.Variant
+          className={selectedAnswer === quiz?.optionC && "selected"}
+          onClick={() => handler(quiz?.optionC)}>
+          {quiz?.optionC}
+        </Wrapper.Variant>
+        <Wrapper.Variant
+          className={selectedAnswer === quiz?.optionD && "selected"}
+          onClick={() => handler(quiz?.optionD)}>
+          {quiz?.optionD}
+        </Wrapper.Variant>
       </Wrapper.Variants>
     </Wrapper>
   );

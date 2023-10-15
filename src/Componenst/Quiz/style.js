@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
   border-radius: 15px;
   background-color: ${({ theme }) => theme.add_color};
 `;
-
+Wrapper.QuizSection = styled.div``;
 Wrapper.Buttons = styled.div`
   display: flex;
   gap: 20px;
@@ -26,3 +26,10 @@ Wrapper.Button = styled.button`
   border-radius: 15px;
   background-color: ${({ theme }) => theme.main_color};
 `;
+Wrapper.Text = styled.div`
+  height: 200px;
+  padding-top: 40px;
+  text-align: center;
+`;
+Wrapper.Point = styled.h3``;
+Wrapper.Group = styled.p``;

@@ -9,7 +9,7 @@ Wrapper.Img = styled.img`
 `;
 Wrapper.Charac = styled.img`
   position: absolute;
-  left: 0%;
+  left: 10%;
   bottom: 50px;
 `;
 Wrapper.ProgressLine = styled.div`
@@ -27,7 +27,7 @@ Wrapper.Progress = styled.div`
   left: 32px;
   height: 5px;
   border-radius: 50px;
-  width: 00%;
+  width: 10%;
   background-color: #9747ff;
 `;
 Wrapper.Level = styled.h3`

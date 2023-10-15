@@ -10,9 +10,11 @@ import CourseCard from "../Generic/CouseCard";
 import { useSelector } from "react-redux";
 import { Select } from "antd";
 import { Option } from "antd/es/mentions";
+import axios from "axios";
 const Home = () => {
   const [levelCr, setLevelCr] = useState("easy");
   const { menuOpen } = useSelector(({ menu }) => menu);
+
   return (
     <Wrapper>
       <Wrapper.Content menuOpen={menuOpen}>
@@ -40,11 +42,11 @@ const Home = () => {
           </Wrapper.StatusGrid>
           <Wrapper.Title>
             Oqilyotgan kurslar
-            <Wrapper.Select
+            {/* <Wrapper.Select
               options={level}
               defaultValue={"easy"}
               onChange={(e) => setLevelCr(e)}
-            />
+            /> */}
           </Wrapper.Title>
 
           <Wrapper.Courses>

@@ -74,6 +74,6 @@ Wrapper.Select = styled(Select)`
 `;
 Wrapper.Widjets = styled.div`
   width: 360px;
-  background-color: blue;
+  /* background-color: blue; */
   height: 100vh;
 `;
